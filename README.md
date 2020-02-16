@@ -1,3 +1,4 @@
 # sekoya
 Sekoya.WEB start.
-SUBMIT button click :)
+
+SUBMIT button click.
