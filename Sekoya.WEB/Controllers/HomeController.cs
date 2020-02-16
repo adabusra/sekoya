@@ -30,9 +30,9 @@ namespace Sekoya.WEB.Controllers
                 issue.Title = "Apsiyon"; //model.Title
                 issue.Contents = "Case Study"; // model.Contents
                 businessIssue.InsertIssue(issue);
-                return Json(new { Success = true });
+                return View("Index", model);
             }
-            return PartialView("Index", model);
+            return View("Index", model);
         }
 
         public IActionResult About()
