@@ -7,7 +7,11 @@ namespace Sekoya.BLL.Repository
 {
     public abstract class GenericBusiness<T> where T : class
     {
-        GenericRepository<T> repo = new GenericRepository<T>();
+        GenericRepository<T> repo;
+        public GenericBusiness()
+        {
+            repo = new GenericRepository<T>();
+        }
 
         public void Insert(T entity)
         {

@@ -14,7 +14,7 @@ namespace Sekoya.TEST
             businessIssue.InsertIssue(new Issue().GetMockIssue());
             object model = businessIssue.FindIssue(new Issue().GetMockIssue().Id);
             Assert.NotNull(model);
-            //businessIssue.DeleteIssue(model as Issue);
+            businessIssue.DeleteIssue(model as Issue);
         }
     }
 

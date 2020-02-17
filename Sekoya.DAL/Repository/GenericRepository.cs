@@ -1,4 +1,5 @@
-﻿using Sekoya.DAL.Constants;
+﻿using Microsoft.EntityFrameworkCore;
+using Sekoya.DAL.Constants;
 using Sekoya.DAL.Models;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,11 @@ namespace Sekoya.DAL.Repository
     public class GenericRepository<T> : IGenericRepository<T>
       where T : class
     {
-        SEKOYAContext context = new SEKOYAContext();
+        DbContext context;
+        public GenericRepository()
+        {
+            context = new SEKOYAContext();
+        }
         public virtual void Insert(T model)
         {
             try

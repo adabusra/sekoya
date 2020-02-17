@@ -20,5 +20,6 @@ namespace Sekoya.DAL.Repository
                 return _instance;
             }
         }
+        
     }
 }
